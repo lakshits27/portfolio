@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lakshit (Lavi) — CSE student, developer, and builder.">
+  <meta name="theme-color" content="#060709" id="meta-theme-color">
+
+  <title>Lakshit (Lavi) — Portfolio</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0C0E'/%3E%3Cpath d='M7 10 L13 16 L7 22' fill='none' stroke='%236d94a8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='16' y1='22' x2='25' y2='22' stroke='%236d94a8' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css?v=6">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lakshit (Lavi) — Portfolio">
+  <meta property="og:description" content="CSE student who enjoys building software, exploring technology, and turning ideas into useful projects.">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lakshit (Lavi) — Portfolio">
+  <meta name="twitter:description" content="CSE student who enjoys building software, exploring technology, and turning ideas into useful projects.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lakshit",
+    "alternateName": "Lavi",
+    "jobTitle": "CSE Engineering Student",
+    "email": "lakshitsinghsaini@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kurukshetra",
+      "addressRegion": "Haryana",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://github.com/hmmlavi",
+      "https://x.com/Lakshits27",
+      "https://www.instagram.com/lakshitsinghsaini/",
+      "https://www.linkedin.com/in/lakshitsinghsaini/"
+    ],
+    "description": "CSE student interested in software development, technology, and building useful projects."
+  }
+  </script>
+
+  <script>
+    try {
+      if (localStorage.getItem('itznan_wallpaper_theme') === 'disabled') {
+        document.documentElement.setAttribute('data-theme', 'default');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'anime-wallpaper');
+      }
+    } catch (e) {}
+  </script>
+</head>
+
+<body class="wallpaper-active">
+
+  <script>
+    if (document.documentElement.getAttribute('data-theme') === 'default') {
+      document.body.classList.remove('wallpaper-active');
+    }
+  </script>
+
+  <div id="wallpaper-bg" class="wallpaper-bg" aria-hidden="true">
+    <div class="wallpaper-img"></div>
+    <div class="wallpaper-overlay"></div>
+  </div>
+
+  <button
+    type="button"
+    class="wallpaper-toggle wallpaper-float js-wallpaper-toggle active"
+    aria-pressed="true"
+    title="Disable anime wallpaper theme"
+  >
+    <span class="wp-icon" aria-hidden="true">✦</span>
+    <span class="wp-label">Wallpaper: <span class="wp-status">On</span></span>
+  </button>
+
+  <nav class="topbar">
+    <a class="home" href="#top">~/lavi</a>
+
+    <div class="topbar-right">
+      <ul>
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+
+      <button
+        type="button"
+        class="wallpaper-toggle js-wallpaper-toggle active"
+        aria-pressed="true"
+        title="Disable anime wallpaper theme"
+      >
+        <span class="wp-icon" aria-hidden="true">✦</span>
+        <span class="wp-label">Wallpaper: <span class="wp-status">On</span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="split-layout">
+
+    <aside class="split-left">
+      <header class="hero" id="top">
+
+        <p class="eyebrow t-shimmer" data-text="$ cat profile.txt">
+          $ cat profile.txt
+        </p>
+
+        <h1 class="name">Lakshit</h1>
+
+        <p class="role">CSE Engineering Student · Software Developer</p>
+
+        <p class="blurb">
+          Curious about technology, software, and the many things you can build with code.
+          I enjoy exploring ideas and turning them into practical projects.
+        </p>
+
+        <div class="terminal">
+          <div class="bar">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="label">terminal</span>
+          </div>
+          <pre id="typed" aria-label="Terminal introduction"></pre>
+        </div>
+
+        <nav class="side-nav" aria-label="Page sections">
+          <ul>
+            <li>
+              <a href="#about" class="side-link">
+                <span class="side-indicator"></span>
+                <span class="side-text">~/about</span>
+              </a>
+            </li>
+            <li>
+              <a href="#projects" class="side-link">
+                <span class="side-indicator"></span>
+                <span class="side-text">~/projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="#stack" class="side-link">
+                <span class="side-indicator"></span>
+                <span class="side-text">~/stack</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="side-link">
+                <span class="side-indicator"></span>
+                <span class="side-text">~/contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="cta-row">
+          <a class="btn primary" href="https://github.com/hmmlavi" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn" href="#about">About</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+
+      </header>
+    </aside>
+
+    <main class="split-right">
+
+      <!-- ABOUT -->
+      <section id="about">
+        <span class="path">~/about</span>
+        <h2>Field notes</h2>
+
+        <p class="lede">
+          I’m a CSE engineering student who enjoys learning by building.
+          My interests span software development, AI, the web, and emerging technology.
+          I like exploring different fields, experimenting with ideas, and creating
+          projects that solve practical problems.
+        </p>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="wide">
+        <span class="path">~/projects</span>
+        <h2>Repositories</h2>
+
+        <p class="lede" style="margin-bottom: 1.25rem;">
+          A few things I have been building and exploring.
+        </p>
+
+        <div class="repo-list">
+
+          <div class="repo-row">
+            <a class="repo-name" href="https://github.com/hmmlavi/sortify-desktop" target="_blank" rel="noopener">Sortify</a>
+            <span class="repo-lang">Desktop App</span>
+            <p class="repo-note">
+              An AI-assisted desktop file organization and renaming app, built to make managing files easier.
+              <a href="https://github.com/hmmlavi/sortify-desktop" target="_blank" rel="noopener">→ repo</a>
+            </p>
+          </div>
+
+          <div class="repo-row">
+            <a class="repo-name" href="https://github.com/hmmlavi/Pustakalaya-LMS" target="_blank" rel="noopener">Pustakalaya-LMS</a>
+            <span class="repo-lang">Python</span>
+            <p class="repo-note">
+              A library management system project with a focus on practical workflows, maintainable code, and testing.
+              <a href="https://github.com/hmmlavi/Pustakalaya-LMS" target="_blank" rel="noopener">→ repo</a>
+            </p>
+          </div>
+
+          <div class="repo-row">
+            <a class="repo-name" href="https://github.com/hmmlavi/Veylo" target="_blank" rel="noopener">Veylo</a>
+            <span class="repo-lang">Web Project</span>
+            <p class="repo-note">
+              A web project built and maintained as part of my ongoing experiments with frontend development.
+              <a href="https://github.com/hmmlavi/Veylo" target="_blank" rel="noopener">→ repo</a>
+            </p>
+          </div>
+
+          <div class="repo-row">
+            <a class="repo-name" href="https://github.com/hmmlavi/FacilityFix" target="_blank" rel="noopener">FacilityFix</a>
+            <span class="repo-lang">Python / Flask</span>
+            <p class="repo-note">
+              A facility issue reporting and management application developed during my software development internship.
+              <a href="https://github.com/hmmlavi/FacilityFix" target="_blank" rel="noopener">→ repo</a>
+            </p>
+          </div>
+
+          <div class="repo-row">
+            <a class="repo-name" href="https://github.com/hmmlavi/SaBuddy" target="_blank" rel="noopener">SaBuddy</a>
+            <span class="repo-lang">Software Project</span>
+            <p class="repo-note">
+              A project in my portfolio that I continue to develop and improve.
+              <a href="https://github.com/hmmlavi/SaBuddy" target="_blank" rel="noopener">→ repo</a>
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TOOLS OF THE TRADE -->
+      <section id="stack">
+        <span class="path">~/stack</span>
+        <h2>Tools of the trade</h2>
+
+        <div class="stack-groups">
+
+          <div class="stack-group">
+            <div class="glabel">Languages</div>
+
+            <div class="stack-chips">
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" loading="lazy">
+                Python
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="" loading="lazy">
+                C
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="" loading="lazy">
+                C++
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" loading="lazy">
+                JavaScript
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" loading="lazy">
+                TypeScript
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">
+                SQL
+              </span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <div class="glabel">Frameworks, Tools &amp; Technologies</div>
+
+            <div class="stack-chips">
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" loading="lazy">
+                React
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" loading="lazy">
+                Next.js
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" loading="lazy">
+                Tailwind CSS
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" loading="lazy">
+                Node.js
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="" loading="lazy">
+                Express
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">
+                PostgreSQL
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.simpleicons.org/openai/FFFFFF" alt="" loading="lazy">
+                OpenAI API
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.simpleicons.org/langchain/FFFFFF" alt="" loading="lazy">
+                LangChain
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" loading="lazy">
+                Git
+              </span>
+
+              <span class="chip">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" alt="" loading="lazy">
+                Vercel
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <span class="path">~/contact</span>
+        <h2>Get in touch</h2>
+
+        <p class="lede">
+          Want to connect, collaborate, or talk about technology and projects?
+          Find me on these platforms.
+        </p>
+
+        <div class="contact-block">
+
+          <div class="contact-row">
+            <span class="k">email</span>
+            <div class="contact-val-wrap">
+              <a href="mailto:lakshitsinghsaini@gmail.com">lakshitsinghsaini@gmail.com ↗</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="k">github</span>
+            <div class="contact-val-wrap">
+              <a href="https://github.com/hmmlavi" target="_blank" rel="noopener">github.com/hmmlavi ↗</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="k">linkedin</span>
+            <div class="contact-val-wrap">
+              <a href="https://www.linkedin.com/in/lakshitsinghsaini/" target="_blank" rel="noopener">linkedin.com/in/lakshitsinghsaini ↗</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="k">x</span>
+            <div class="contact-val-wrap">
+              <a href="https://x.com/Lakshits27" target="_blank" rel="noopener">@Lakshits27 ↗</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="k">discord</span>
+            <div class="contact-val-wrap">
+              <span class="val-text">hmmlavi</span>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="k">instagram</span>
+            <div class="contact-val-wrap">
+              <a href="https://www.instagram.com/lakshitsinghsaini/" target="_blank" rel="noopener">@lakshitsinghsaini ↗</a>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <span class="k">location</span>
+            <div class="contact-val-wrap">
+              <span class="val-text">Kurukshetra, Haryana, India (IST · UTC+5:30)</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Lakshit</span>
+        <span>built with semantic HTML, CSS &amp; JS</span>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="script.js?v=5"></script>
+</body>
+</html>

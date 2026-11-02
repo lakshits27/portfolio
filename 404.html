@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A0C0E">
+  <title>Page Not Found — Lakshit</title>
+
+  <script>
+    (function () {
+      var basePath = '/portfolio/';
+      var currentPath = window.location.pathname;
+
+      // Remove the GitHub Pages project path.
+      var relativePath = currentPath.startsWith(basePath)
+        ? currentPath.slice(basePath.length)
+        : currentPath.replace(/^\/+/, '');
+
+      relativePath = relativePath
+        .replace(/\/+$/, '')
+        .replace(/\.html$/, '');
+
+      var validSections = [
+        'about',
+        'projects',
+        'stack',
+        'contact'
+      ];
+
+      if (validSections.includes(relativePath)) {
+        window.location.replace(basePath + '#' + relativePath);
+      } else {
+        window.location.replace(basePath);
+      }
+    })();
+  </script>
+</head>
+
+<body style="background:#0A0C0E;color:#e8edf0;font-family:sans-serif;padding:2rem;">
+  <p>
+    Redirecting to
+    <a href="/portfolio/" style="color:#6d94a8;">Lakshit's portfolio</a>...
+  </p>
+</body>
+</html>
