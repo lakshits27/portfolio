@@ -1,114 +1,148 @@
 <div align="center">
 
-# Lakshit · Lavi
+# 👋 Hey, I'm Lakshit!
 
-### Personal Portfolio
+### 💻 Computer Science Student · Developer · Curious Mind
 
-A personal corner of the internet for the projects I build, the technologies I explore, and the ideas I enjoy turning into software.
+<a href="https://lakshits27.github.io/portfolio/">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7C8CF8&center=true&vCenter=true&width=520&lines=Welcome+to+my+portfolio!;I+build+things+with+code.;Always+learning.+Always+building." alt="Animated introduction" />
+</a>
 
-[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-Visit-8B9CF6?style=for-the-badge)](https://lakshits27.github.io/portfolio/)
-[![GitHub](https://img.shields.io/badge/GitHub-hmmlavi-181717?style=for-the-badge&logo=github)](https://github.com/hmmlavi)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/lakshitsinghsaini/)
+<p>
+  <a href="https://lakshits27.github.io/portfolio/"><img src="https://img.shields.io/badge/🌐_VISIT_PORTFOLIO-6C7CFF?style=for-the-badge" alt="Visit portfolio" /></a>
+  <a href="https://github.com/hmmlavi"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="mailto:lakshitsinghsaini@gmail.com"><img src="https://img.shields.io/badge/EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2" width="100%" alt="" />
 
 </div>
 
----
+## 🚀 About
 
-## About
+I'm **Lakshit (Lavi)**, a Computer Science engineering student and developer from **Kurukshetra, India**.
 
-Hey, I'm **Lakshit (Lavi)**, a Computer Science engineering student and software developer based in Kurukshetra, India.
+I enjoy exploring technology, experimenting with ideas, and building useful things — from web experiences to desktop apps and AI-powered projects.
 
-I'm curious about technology and enjoy exploring different fields, from software development and AI to the web and emerging technologies. I learn by experimenting, building projects, and turning ideas into practical things.
+> Curious by nature. Building one project at a time.
 
-This repository contains the source code for my personal portfolio website.
+## ✨ What's on this website?
 
-## What's inside
+| | |
+|:---|:---|
+| 🧑‍💻 **About me** | A little introduction and what I enjoy |
+| 🛠️ **Projects** | Things I've built and the code behind them |
+| ⚡ **Tech stack** | Languages, frameworks, and tools I explore |
+| 📬 **Contact** | Find me around the internet |
 
-- **About** — a short introduction and areas of interest
-- **Projects** — selected projects with links to their source repositories
-- **Tech stack** — languages, frameworks, and tools I work with
-- **Contact** — ways to connect
+## 🧩 Featured projects
 
-## Features
+<table>
+<tr>
+<td width="50%" valign="top">
 
-- Terminal-inspired introduction with a typing animation
-- Animated wallpaper background with an on/off toggle
-- Adaptive visual theme
-- Responsive split-layout design
-- Lightweight static website with no framework or build step
-- Custom SVG favicon and page metadata
+### 📁 [Sortify](https://github.com/hmmlavi/sortify-desktop)
+AI-assisted desktop file organization and renaming.
 
-## Featured projects
+</td>
+<td width="50%" valign="top">
 
-| Project | Description | Repository |
-| --- | --- | --- |
-| **Sortify** | Desktop app for AI-assisted file organization and renaming | [Source](https://github.com/hmmlavi/sortify-desktop) |
-| **Pustakalaya-LMS** | Library management system focused on practical workflows and testing | [Source](https://github.com/hmmlavi/Pustakalaya-LMS) |
-| **Veylo** | Web project and frontend development experiments | [Source](https://github.com/hmmlavi/Veylo) |
-| **FacilityFix** | Facility issue reporting and management application | [Source](https://github.com/hmmlavi/FacilityFix) |
-| **SaBuddy** | Software project | [Source](https://github.com/hmmlavi/SaBuddy) |
+### 📚 [Pustakalaya-LMS](https://github.com/hmmlavi/Pustakalaya-LMS)
+A library management system built around practical workflows.
 
-## Tech stack
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-**Languages:** Python, C, C++, JavaScript, TypeScript, SQL
+### 🌐 [Veylo](https://github.com/hmmlavi/Veylo)
+A web project exploring frontend development.
 
-**Frameworks and tools:** React, Next.js, Tailwind CSS, Node.js, Express, PostgreSQL, OpenAI API, LangChain, Git, Vercel
+</td>
+<td width="50%" valign="top">
 
-## Built with
+### 🧰 [FacilityFix](https://github.com/hmmlavi/FacilityFix)
+A facility issue reporting and management application.
 
-- HTML5 for semantic page structure
-- CSS3 for layout, responsive styling, visual effects, and themes
-- Vanilla JavaScript for interactions and animations
-- GitHub Pages for static hosting
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
-## Run locally
+### 🤝 [SaBuddy](https://github.com/hmmlavi/SaBuddy)
+Another project from my development journey.
 
-No package installation or build command is required.
+</td>
+</tr>
+</table>
+
+## ⚙️ Tech I work with
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=python,c,cpp,js,ts,react,nextjs,tailwind,nodejs,express,postgres,git,github,vercel,vscode&perline=8" alt="Technology icons" />
+
+</div>
+
+## 🎨 Portfolio features
+
+- ⌨️ Terminal-inspired intro with a typing animation
+- 🌌 Animated background with an on/off toggle
+- 🌓 Adaptive visual theme
+- 📱 Responsive layout
+- ⚡ Lightweight — plain HTML, CSS, and JavaScript
+- 💠 Custom 3D terminal-style SVG favicon
+
+## 🖥️ Run it locally
+
+No build tools or package installation needed.
 
 ```bash
 git clone https://github.com/lakshits27/portfolio.git
 cd portfolio
 ```
 
-Open `index.html` in your browser, or run the folder with the VS Code Live Server extension.
+Open **index.html** in your browser, or use VS Code Live Server.
 
-## Project structure
+## 📂 Project structure
 
 ```text
 portfolio/
-├── background/
-│   └── 87146-755552-animegif.gif
-├── 404.html
-├── favicon.svg
-├── index.html
-├── Melon Tea.otf
-├── robots.txt
-├── script.js
-├── sitemap.xml
-└── style.css
+├── background/       # Background assets
+├── 404.html          # Custom not-found page
+├── favicon.svg       # Custom terminal favicon
+├── index.html        # Main portfolio page
+├── Melon Tea.otf     # Custom font
+├── robots.txt        # Search engine crawling rules
+├── script.js         # Interactions and animations
+├── sitemap.xml       # Sitemap
+└── style.css         # Layout and styling
 ```
 
-## Deployment
+## 🚀 Deployment
 
-The site is intended to be published through **GitHub Pages** from the `main` branch and repository root.
+Hosted with **GitHub Pages**.
 
-**Live website:** https://lakshits27.github.io/portfolio/
+🔗 **Live site:** [lakshits27.github.io/portfolio](https://lakshits27.github.io/portfolio/)
 
-To publish updates, push commits to `main`. GitHub Pages will publish the latest committed files when branch-based Pages deployment is enabled for the repository.
+Push changes to the `main` branch to update the source used by GitHub Pages.
 
-## Connect
-
-- **Email:** [lakshitsinghsaini@gmail.com](mailto:lakshitsinghsaini@gmail.com)
-- **GitHub:** [@hmmlavi](https://github.com/hmmlavi)
-- **LinkedIn:** [LinkedIn profile](https://www.linkedin.com/in/lakshitsinghsaini/)
-- **X:** [@Lakshits27](https://x.com/Lakshits27)
-- **Instagram:** [@lakshitsinghsaini](https://www.instagram.com/lakshitsinghsaini/)
-- **Discord:** `hmmlavi`
-
----
+## 🤝 Let's connect
 
 <div align="center">
 
-**Made with curiosity by Lakshit · Lavi**
+<a href="mailto:lakshitsinghsaini@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+<a href="https://github.com/hmmlavi"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="https://www.linkedin.com/in/lakshitsinghsaini/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://x.com/Lakshits27"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
+<a href="https://www.instagram.com/lakshitsinghsaini/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+
+<br />
+
+### 💙 Thanks for stopping by!
+
+<sub>Made with curiosity & code by **Lakshit · Lavi**</sub>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%" alt="" />
 
 </div>
