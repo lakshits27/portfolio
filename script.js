@@ -134,12 +134,12 @@
     if (enabled) {
       document.body.classList.add('wallpaper-active');
       document.documentElement.setAttribute('data-theme', 'anime-wallpaper');
-      if (metaTheme) metaTheme.setAttribute('content', '#060709');
+      if (metaTheme) metaTheme.setAttribute('content', '#0B0B0D');
       try { localStorage.setItem(STORAGE_KEY, 'enabled'); } catch (e) {}
     } else {
       document.body.classList.remove('wallpaper-active');
       document.documentElement.removeAttribute('data-theme');
-      if (metaTheme) metaTheme.setAttribute('content', '#0A0C0E');
+      if (metaTheme) metaTheme.setAttribute('content', '#0B0B0D');
       try { localStorage.setItem(STORAGE_KEY, 'disabled'); } catch (e) {}
     }
     wallpaperToggles.forEach(function (btn) {
