@@ -13,11 +13,11 @@
   --bg-subtle: #111115;
   --ink: #e8edf0;
   --ink-soft: #8fa5b0;
-  --ink-faint: #4B6270;
+  --ink-faint: #7F8994;
   --rule: #303036;
   --rule-light: #41414A;
-  --accent: #A58BCF;
-  --accent-base: #8069A8;
+  --accent: #8C7E9F;
+  --accent-base: #71647F;
   --accent-ink: #0B0B0D;
   --shadow: 0 4px 20px rgba(10, 12, 14, 0.7);
 
@@ -48,10 +48,10 @@ html[data-theme="anime-wallpaper"] body {
   --ink: #f8fafc;
   --ink-soft: #c8d0da;
   --ink-faint: #758090;
-  --rule: rgba(165, 139, 207, 0.16);
-  --rule-light: rgba(165, 139, 207, 0.26);
-  --accent: #A58BCF;
-  --accent-base: #8069A8;
+  --rule: rgba(140, 126, 159, 0.13);
+  --rule-light: rgba(140, 126, 159, 0.22);
+  --accent: #8C7E9F;
+  --accent-base: #71647F;
   --accent-ink: #0B0B0D;
   --shadow: 0 12px 36px rgba(0, 0, 0, 0.9);
 }
@@ -595,8 +595,8 @@ section > p.lede {
 }
 
 .copy-btn.copied {
-  border-color: #B49AE8;
-  color: #B49AE8;
+  border-color: #8C7E9F;
+  color: #8C7E9F;
 }
 
 footer {
@@ -777,13 +777,13 @@ html[data-theme="anime-wallpaper"] .terminal {
   background: rgba(23, 23, 27, 0.84);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-color: rgba(165, 139, 207, 0.16);
+  border-color: rgba(140, 126, 159, 0.13);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75);
 }
 
 body.wallpaper-active .terminal:hover,
 html[data-theme="anime-wallpaper"] .terminal:hover {
-  border-color: rgba(165, 139, 207, 0.32);
+  border-color: rgba(140, 126, 159, 0.28);
 }
 
 body.wallpaper-active .repo-list,
@@ -796,7 +796,7 @@ html[data-theme="anime-wallpaper"] .repo-list {
 
 body.wallpaper-active .repo-row:hover,
 html[data-theme="anime-wallpaper"] .repo-row:hover {
-  background: rgba(165, 139, 207, 0.05);
+  background: rgba(140, 126, 159, 0.035);
 }
 
 body.wallpaper-active .chip,
@@ -815,7 +815,7 @@ html[data-theme="anime-wallpaper"] .chip:hover {
 
 body.wallpaper-active .contact-block,
 html[data-theme="anime-wallpaper"] .contact-block {
-  background: rgba(16, 20, 26, 0.78);
+  background: rgba(23, 23, 27, 0.84);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-color: var(--rule);
@@ -863,7 +863,7 @@ html[data-theme="anime-wallpaper"] nav.topbar {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--accent-ink);
-  box-shadow: 0 0 14px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 14px rgba(140, 126, 159, 0.12);
 }
 
 .wallpaper-toggle .wp-icon {
