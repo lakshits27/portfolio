@@ -42,17 +42,17 @@
 /* ---------- wallpaper theme ---------- */
 body.wallpaper-active,
 html[data-theme="anime-wallpaper"] body {
-  --bg: #060709;
-  --bg-raised: rgba(18, 20, 26, 0.78);
-  --bg-subtle: rgba(26, 30, 38, 0.65);
+  --bg: #09070D;
+  --bg-raised: rgba(25, 19, 33, 0.82);
+  --bg-subtle: rgba(31, 22, 43, 0.72);
   --ink: #f8fafc;
   --ink-soft: #c8d0da;
   --ink-faint: #758090;
-  --rule: rgba(255, 255, 255, 0.14);
-  --rule-light: rgba(255, 255, 255, 0.28);
-  --accent: #ffffff;
-  --accent-base: #cbd5e1;
-  --accent-ink: #060709;
+  --rule: rgba(180, 154, 232, 0.20);
+  --rule-light: rgba(180, 154, 232, 0.34);
+  --accent: #B49AE8;
+  --accent-base: #8E70C4;
+  --accent-ink: #09070D;
   --shadow: 0 12px 36px rgba(0, 0, 0, 0.9);
 }
 
@@ -589,8 +589,8 @@ section > p.lede {
 }
 
 .copy-btn.copied {
-  border-color: #58bca8;
-  color: #58bca8;
+  border-color: #B49AE8;
+  color: #B49AE8;
 }
 
 footer {
@@ -768,21 +768,21 @@ html[data-theme="anime-wallpaper"] .wallpaper-bg {
 /* ---------- wallpaper glass effects ---------- */
 body.wallpaper-active .terminal,
 html[data-theme="anime-wallpaper"] .terminal {
-  background: rgba(16, 20, 26, 0.78);
+  background: rgba(25, 19, 33, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(180, 154, 232, 0.20);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75);
 }
 
 body.wallpaper-active .terminal:hover,
 html[data-theme="anime-wallpaper"] .terminal:hover {
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(180, 154, 232, 0.42);
 }
 
 body.wallpaper-active .repo-list,
 html[data-theme="anime-wallpaper"] .repo-list {
-  background: rgba(14, 18, 24, 0.72);
+  background: rgba(17, 13, 23, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-color: var(--rule);
@@ -790,12 +790,12 @@ html[data-theme="anime-wallpaper"] .repo-list {
 
 body.wallpaper-active .repo-row:hover,
 html[data-theme="anime-wallpaper"] .repo-row:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(180, 154, 232, 0.07);
 }
 
 body.wallpaper-active .chip,
 html[data-theme="anime-wallpaper"] .chip {
-  background: rgba(18, 22, 28, 0.75);
+  background: rgba(25, 19, 33, 0.82);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-color: var(--rule);
@@ -803,7 +803,7 @@ html[data-theme="anime-wallpaper"] .chip {
 
 body.wallpaper-active .chip:hover,
 html[data-theme="anime-wallpaper"] .chip:hover {
-  background: rgba(32, 38, 48, 0.9);
+  background: rgba(49, 35, 67, 0.92);
   border-color: var(--accent);
 }
 
@@ -817,7 +817,7 @@ html[data-theme="anime-wallpaper"] .contact-block {
 
 body.wallpaper-active nav.topbar,
 html[data-theme="anime-wallpaper"] nav.topbar {
-  background: rgba(7, 9, 12, 0.75);
+  background: rgba(9, 7, 13, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom-color: var(--rule);
