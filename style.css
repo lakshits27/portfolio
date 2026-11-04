@@ -976,3 +976,38 @@ html[data-theme="anime-wallpaper"] nav.topbar {
   .social-links { gap: 0.65rem; }
   .social-icon { width: 2.8rem; height: 2.8rem; }
 }
+
+
+/* Accessibility improvements */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 1000;
+  padding: 0.65rem 0.9rem;
+  color: #fff;
+  background: #24242A;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+.skip-link:focus { top: 1rem; }
+:focus-visible {
+  outline: 2px solid #C8B4E8;
+  outline-offset: 3px;
+}
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+}
+.legal-links a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-links a:hover, .legal-links a:focus-visible { color: var(--ink); }
+@media (max-width: 600px) {
+  footer { gap: 0.9rem; }
+  .legal-links { gap: 0.65rem; }
+}
