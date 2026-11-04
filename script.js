@@ -124,4 +124,43 @@
     });
   });
 
+
+  // Wallpaper theme toggle handler
+  var STORAGE_KEY = 'itznan_wallpaper_theme';
+  var wallpaperToggles = document.querySelectorAll('.js-wallpaper-toggle');
+  var metaTheme = document.getElementById('meta-theme-color');
+
+  function setWallpaperState(enabled) {
+    if (enabled) {
+      document.body.classList.add('wallpaper-active');
+      document.documentElement.setAttribute('data-theme', 'anime-wallpaper');
+      if (metaTheme) metaTheme.setAttribute('content', '#060709');
+      try { localStorage.setItem(STORAGE_KEY, 'enabled'); } catch (e) {}
+    } else {
+      document.body.classList.remove('wallpaper-active');
+      document.documentElement.removeAttribute('data-theme');
+      if (metaTheme) metaTheme.setAttribute('content', '#0A0C0E');
+      try { localStorage.setItem(STORAGE_KEY, 'disabled'); } catch (e) {}
+    }
+    wallpaperToggles.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+      var statusSpan = btn.querySelector('.wp-status');
+      if (statusSpan) statusSpan.textContent = enabled ? 'On' : 'Off';
+      btn.classList.toggle('active', enabled);
+      btn.setAttribute('title', enabled ? 'Disable wallpaper theme' : 'Enable wallpaper theme');
+    });
+  }
+
+  var savedState = null;
+  try { savedState = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  setWallpaperState(savedState !== 'disabled');
+
+  wallpaperToggles.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var active = document.body.classList.contains('wallpaper-active') ||
+        document.documentElement.getAttribute('data-theme') === 'anime-wallpaper';
+      setWallpaperState(!active);
+    });
+  });
+
 })();
