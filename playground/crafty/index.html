@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0B0B0D">
+  <meta name="description" content="Crafty — an AI-powered element combination experiment in Lakshit's Playground.">
+  <title>Crafty — Playground | Lakshit</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="crafty.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="back-link" href="../index.html"><span aria-hidden="true">←</span> <span>Techfolio</span></a>
+    <a class="brand" href="#top" aria-label="Crafty home"><span class="brand-mark">✳</span> crafty<span class="brand-dot">.</span></a>
+    <div class="top-actions">
+      <span class="save-state" id="saveState">Saved locally</span>
+      <button class="icon-button" id="settingsButton" type="button" aria-label="AI settings" title="AI settings">⚙</button>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="intro">
+      <div class="eyebrow"><span class="status-dot"></span> AN AI-POWERED EXPERIMENT</div>
+      <h1>What can you <em>make?</em></h1>
+      <p>Mix two things. See what the world becomes.</p>
+    </section>
+
+    <section class="game-layout" aria-label="Crafty game">
+      <div class="workbench panel">
+        <div class="panel-heading">
+          <div><span class="section-kicker">01 / WORKSPACE</span><h2>Your workbench</h2></div>
+          <button class="text-button" id="clearBoard" type="button">Clear board ↗</button>
+        </div>
+        <div class="board" id="board" aria-label="Combination workspace">
+          <div class="board-hint" id="boardHint"><span class="hint-symbol">＋</span><span>Pick any two elements below<br>or drag one onto another.</span></div>
+        </div>
+        <div class="combine-row">
+          <div class="combine-status" id="combineStatus" aria-live="polite">Select two elements to combine</div>
+          <button class="combine-button" id="combineButton" type="button" disabled><span>Combine</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="result-area" id="resultArea" aria-live="polite"></div>
+      </div>
+
+      <aside class="collection panel">
+        <div class="panel-heading collection-heading">
+          <div><span class="section-kicker">02 / COLLECTION</span><h2>Discovered</h2></div>
+          <span class="count" id="discoveryCount">4</span>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Find an element..." autocomplete="off"></label>
+        <div class="elements" id="elements" aria-label="Your discovered elements"></div>
+        <div class="collection-footer"><span id="collectionLabel">Your discoveries</span><button class="text-button danger" id="resetGame" type="button">Reset all</button></div>
+      </aside>
+    </section>
+
+    <footer class="game-footer"><span>Made for curiosity.</span><span>Crafty <i>·</i> a Playground experiment by <a href="../index.html">Lavi</a></span></footer>
+  </main>
+
+  <dialog class="settings-dialog" id="settingsDialog">
+    <form method="dialog" class="dialog-head"><div><span class="section-kicker">CONFIGURATION</span><h2>AI settings</h2></div><button class="icon-button close-button" aria-label="Close settings">×</button></form>
+    <div class="dialog-content">
+      <p>Crafty uses Google's Gemini API to invent combinations that aren't in a fixed recipe list.</p>
+      <label for="apiKey">Gemini API key</label>
+      <input id="apiKey" class="key-input" type="password" placeholder="Paste your API key" autocomplete="off" spellcheck="false">
+      <div class="key-note">Your key stays in this browser tab only and is cleared when the tab session ends. Requests go directly to Google's Gemini API. Never use a shared or public device for a personal key.</div>
+      <label for="modelSelect">Model</label>
+      <select id="modelSelect" class="key-input"><option value="gemini-2.5-flash">Gemini 2.5 Flash</option><option value="gemini-2.0-flash">Gemini 2.0 Flash</option></select>
+      <div class="dialog-actions"><button class="secondary-button" id="removeKey" type="button">Remove key</button><button class="combine-button" id="saveSettings" type="button">Save settings</button></div>
+      <a class="api-link" href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Get a Gemini API key ↗</a>
+      <p class="settings-message" id="settingsMessage" role="status"></p>
+    </div>
+  </dialog>
+  <script src="crafty.js"></script>
+</body>
+</html>
