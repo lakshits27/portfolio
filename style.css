@@ -894,3 +894,79 @@ html[data-theme="anime-wallpaper"] nav.topbar {
     box-shadow: var(--shadow);
   }
 }
+
+/* ---------- icon-only social links ---------- */
+.social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+.social-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  color: var(--ink-soft);
+  background: var(--bg-raised);
+  border: 1px solid var(--rule);
+  border-radius: 0.55rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--duration-quick) var(--ease-smooth-out),
+              border-color var(--duration-quick) var(--ease-smooth-out),
+              background var(--duration-quick) var(--ease-smooth-out),
+              transform var(--duration-quick) var(--ease-smooth-out);
+}
+.social-icon svg {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.social-icon svg .filled { fill: currentColor; stroke: none; }
+.social-icon:hover,
+.social-icon:focus-visible {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--bg-subtle);
+  transform: translateY(-2px);
+}
+.social-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.65rem);
+  z-index: 20;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--rule-light);
+  border-radius: 0.35rem;
+  background: var(--bg-raised);
+  color: var(--ink);
+  font: 0.72rem/1.2 var(--font-mono);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 4px);
+  transition: opacity var(--duration-quick) ease, transform var(--duration-quick) ease, visibility var(--duration-quick) ease;
+}
+.social-icon:hover::after,
+.social-icon:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+.social-icon:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 480px) {
+  .social-links { gap: 0.65rem; }
+  .social-icon { width: 2.8rem; height: 2.8rem; }
+}
