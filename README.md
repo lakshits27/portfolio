@@ -91,7 +91,7 @@ Another project from my development journey.
 - 🌓 Adaptive visual theme
 - 📱 Responsive layout
 - ⚡ Lightweight — plain HTML, CSS, and JavaScript
-- 💠 Custom 3D terminal-style SVG favicon
+- 💠 Minimal circular terminal SVG favicon
 
 ## 🖥️ Run it locally
 
