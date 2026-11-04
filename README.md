@@ -100,7 +100,7 @@ To publish updates, push commits to `main`. GitHub Pages will publish the latest
 
 - **Email:** [lakshitsinghsaini@gmail.com](mailto:lakshitsinghsaini@gmail.com)
 - **GitHub:** [@hmmlavi](https://github.com/hmmlavi)
-- **LinkedIn:** [lakshitsinghsingh](https://www.linkedin.com/in/lakshitsinghsaini/)
+- **LinkedIn:** [LinkedIn profile](https://www.linkedin.com/in/lakshitsinghsaini/)
 - **X:** [@Lakshits27](https://x.com/Lakshits27)
 - **Instagram:** [@lakshitsinghsaini](https://www.instagram.com/lakshitsinghsaini/)
 - **Discord:** `hmmlavi`
