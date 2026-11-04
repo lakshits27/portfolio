@@ -8,17 +8,17 @@
 
 :root {
   /* Midnight Slate Theme */
-  --bg: #09070D;
-  --bg-raised: #191321;
-  --bg-subtle: #110D17;
+  --bg: #0B0B0D;
+  --bg-raised: #17171B;
+  --bg-subtle: #111115;
   --ink: #e8edf0;
   --ink-soft: #8fa5b0;
   --ink-faint: #4B6270;
-  --rule: #34263F;
-  --rule-light: #4A365B;
-  --accent: #B49AE8;
-  --accent-base: #8E70C4;
-  --accent-ink: #09070D;
+  --rule: #303036;
+  --rule-light: #41414A;
+  --accent: #A58BCF;
+  --accent-base: #8069A8;
+  --accent-ink: #0B0B0D;
   --shadow: 0 4px 20px rgba(10, 12, 14, 0.7);
 
   --font-display: "Melon Tea", "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -42,22 +42,28 @@
 /* ---------- wallpaper theme ---------- */
 body.wallpaper-active,
 html[data-theme="anime-wallpaper"] body {
-  --bg: #09070D;
-  --bg-raised: rgba(25, 19, 33, 0.82);
-  --bg-subtle: rgba(31, 22, 43, 0.72);
+  --bg: #0B0B0D;
+  --bg-raised: rgba(23, 23, 27, 0.84);
+  --bg-subtle: rgba(28, 28, 33, 0.76);
   --ink: #f8fafc;
   --ink-soft: #c8d0da;
   --ink-faint: #758090;
-  --rule: rgba(180, 154, 232, 0.20);
-  --rule-light: rgba(180, 154, 232, 0.34);
-  --accent: #B49AE8;
-  --accent-base: #8E70C4;
-  --accent-ink: #09070D;
+  --rule: rgba(165, 139, 207, 0.16);
+  --rule-light: rgba(165, 139, 207, 0.26);
+  --accent: #A58BCF;
+  --accent-base: #8069A8;
+  --accent-ink: #0B0B0D;
   --shadow: 0 12px 36px rgba(0, 0, 0, 0.9);
 }
 
 * {
   box-sizing: border-box;
+}
+
+
+/* Minimal circular pointer */
+html, body, a, button, [role="button"], input, textarea, select {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23A58BCF'/%3E%3C/svg%3E") 8 8, auto;
 }
 
 html {
@@ -768,21 +774,21 @@ html[data-theme="anime-wallpaper"] .wallpaper-bg {
 /* ---------- wallpaper glass effects ---------- */
 body.wallpaper-active .terminal,
 html[data-theme="anime-wallpaper"] .terminal {
-  background: rgba(25, 19, 33, 0.82);
+  background: rgba(23, 23, 27, 0.84);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-color: rgba(180, 154, 232, 0.20);
+  border-color: rgba(165, 139, 207, 0.16);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.75);
 }
 
 body.wallpaper-active .terminal:hover,
 html[data-theme="anime-wallpaper"] .terminal:hover {
-  border-color: rgba(180, 154, 232, 0.42);
+  border-color: rgba(165, 139, 207, 0.32);
 }
 
 body.wallpaper-active .repo-list,
 html[data-theme="anime-wallpaper"] .repo-list {
-  background: rgba(17, 13, 23, 0.82);
+  background: rgba(17, 17, 21, 0.84);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-color: var(--rule);
@@ -790,7 +796,7 @@ html[data-theme="anime-wallpaper"] .repo-list {
 
 body.wallpaper-active .repo-row:hover,
 html[data-theme="anime-wallpaper"] .repo-row:hover {
-  background: rgba(180, 154, 232, 0.07);
+  background: rgba(165, 139, 207, 0.05);
 }
 
 body.wallpaper-active .chip,
@@ -803,7 +809,7 @@ html[data-theme="anime-wallpaper"] .chip {
 
 body.wallpaper-active .chip:hover,
 html[data-theme="anime-wallpaper"] .chip:hover {
-  background: rgba(49, 35, 67, 0.92);
+  background: rgba(44, 40, 50, 0.92);
   border-color: var(--accent);
 }
 
@@ -817,7 +823,7 @@ html[data-theme="anime-wallpaper"] .contact-block {
 
 body.wallpaper-active nav.topbar,
 html[data-theme="anime-wallpaper"] nav.topbar {
-  background: rgba(9, 7, 13, 0.82);
+  background: rgba(11, 11, 13, 0.84);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom-color: var(--rule);
