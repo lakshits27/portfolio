@@ -108,6 +108,43 @@
   window.addEventListener('scroll', updateActiveSection, { passive: true });
   updateActiveSection();
 
+  // Compact mobile navigation menu
+  var mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  var mobileNavigation = document.getElementById('mobile-navigation');
+
+  function setMobileMenuOpen(open) {
+    if (!mobileMenuToggle || !mobileNavigation) return;
+    mobileNavigation.classList.toggle('is-open', open);
+    mobileMenuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mobileMenuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    mobileMenuToggle.setAttribute('title', open ? 'Close menu' : 'Open menu');
+  }
+
+  if (mobileMenuToggle && mobileNavigation) {
+    mobileMenuToggle.addEventListener('click', function () {
+      setMobileMenuOpen(mobileMenuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    mobileNavigation.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        setMobileMenuOpen(false);
+      });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!mobileNavigation.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+        setMobileMenuOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        setMobileMenuOpen(false);
+        mobileMenuToggle.focus();
+      }
+    });
+  }
+
   // Copy-to-clipboard handler with a safe manual fallback.
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {
