@@ -4,12 +4,12 @@
 
 ### 💻 Computer Science Student · Developer · Curious Mind
 
-<a href="https://lakshits27.github.io/portfolio/">
+<a href="https://lakshits27.github.io/techfolio/">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7C8CF8&center=true&vCenter=true&width=520&lines=Welcome+to+my+portfolio!;I+build+things+with+code.;Always+learning.+Always+building." alt="Animated introduction" />
 </a>
 
 <p>
-  <a href="https://lakshits27.github.io/portfolio/"><img src="https://img.shields.io/badge/🌐_VISIT_PORTFOLIO-6C7CFF?style=for-the-badge" alt="Visit portfolio" /></a>
+  <a href="https://lakshits27.github.io/techfolio/"><img src="https://img.shields.io/badge/🌐_VISIT_PORTFOLIO-6C7CFF?style=for-the-badge" alt="Visit portfolio" /></a>
   <a href="https://github.com/hmmlavi"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="mailto:lakshitsinghsaini@gmail.com"><img src="https://img.shields.io/badge/EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
@@ -98,8 +98,8 @@ Another project from my development journey.
 No build tools or package installation needed.
 
 ```bash
-git clone https://github.com/lakshits27/portfolio.git
-cd portfolio
+git clone https://github.com/lakshits27/techfolio.git
+cd techfolio
 ```
 
 Open **index.html** in your browser, or use VS Code Live Server.
@@ -107,23 +107,29 @@ Open **index.html** in your browser, or use VS Code Live Server.
 ## 📂 Project structure
 
 ```text
-portfolio/
-├── background/       # Background assets
+techfolio/
+├── assets/           # Static assets
+├── background/       # Animated background assets
 ├── 404.html          # Custom not-found page
+├── cookies.html      # Cookie and browser storage information
 ├── favicon.svg       # Custom terminal favicon
 ├── index.html        # Main portfolio page
-├── Melon Tea.otf     # Custom font
+├── legal.css         # Legal-page styling
+├── mobile.css        # Responsive phone and tablet styling
+├── privacy.html      # Privacy policy
+├── refunds.html      # Refund policy
 ├── robots.txt        # Search engine crawling rules
 ├── script.js         # Interactions and animations
 ├── sitemap.xml       # Sitemap
-└── style.css         # Layout and styling
+├── style.css         # Main layout and styling
+└── terms.html        # Terms and conditions
 ```
 
 ## 🚀 Deployment
 
 Hosted with **GitHub Pages**.
 
-🔗 **Live site:** [lakshits27.github.io/portfolio](https://lakshits27.github.io/portfolio/)
+🔗 **Live site:** [lakshits27.github.io/techfolio](https://lakshits27.github.io/techfolio/)
 
 Push changes to the `main` branch to update the source used by GitHub Pages.
 
