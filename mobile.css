@@ -1,0 +1,265 @@
+/* ---------- Android and small-screen refinements ---------- */
+@media (max-width: 1023px) {
+  html, body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+  }
+
+  nav.topbar {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+    padding: 0.8rem max(1rem, env(safe-area-inset-left)) 0.8rem max(1rem, env(safe-area-inset-right));
+  }
+
+  .topbar-right {
+    flex: 1 1 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.65rem 0.8rem;
+  }
+
+  .topbar-right ul {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .topbar-right ul li { min-width: 0; }
+  .topbar-right ul a {
+    display: inline-block;
+    padding: 0.3rem 0;
+    font-size: clamp(0.68rem, 2.7vw, 0.8rem);
+  }
+
+  .topbar-right > .wallpaper-toggle,
+  .topbar-right > .theme-toggle {
+    min-height: 2.5rem;
+  }
+
+  .topbar-right > .wallpaper-toggle {
+    margin-left: auto;
+    padding: 0.45rem 0.65rem;
+    font-size: 0.68rem;
+  }
+
+  .split-layout {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .split-left,
+  .split-right {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .split-left header.hero {
+    width: 100%;
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: clamp(2.1rem, 7vw, 3.2rem) clamp(1.1rem, 5vw, 2rem) 2.1rem;
+  }
+
+  .split-right {
+    padding: 0 0 max(2rem, env(safe-area-inset-bottom));
+  }
+
+  .split-right section,
+  .split-right section.wide {
+    width: 100%;
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 2.25rem clamp(1.1rem, 5vw, 2rem);
+  }
+
+  .split-right section:first-of-type {
+    border-top: 1px solid var(--rule);
+  }
+
+  .split-right footer {
+    width: 100%;
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 1.6rem clamp(1.1rem, 5vw, 2rem) 2rem;
+  }
+
+  .terminal,
+  .repo-list,
+  .contact-block {
+    max-width: 100%;
+  }
+
+  .cta-row { gap: 0.6rem; }
+  .btn {
+    min-height: 2.65rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chip {
+    min-height: 2.25rem;
+    padding: 0.42rem 0.68rem;
+  }
+
+  .social-icon {
+    width: 2.9rem;
+    height: 2.9rem;
+  }
+
+  /* Keep the complete animated artwork visible on portrait screens. */
+  .wallpaper-bg {
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .wallpaper-img {
+    inset: 0;
+    background-size: contain;
+    background-position: center center;
+    background-color: #08090b;
+    filter: brightness(0.76) contrast(1.04) saturate(0.96);
+    transform: none;
+    will-change: auto;
+  }
+
+  html[data-color-theme="light"] .wallpaper-img {
+    filter: brightness(1.02) saturate(0.94) contrast(1.01);
+  }
+
+  html[data-color-theme="light"] .wallpaper-overlay {
+    background:
+      linear-gradient(to bottom, rgba(245, 248, 251, 0.24), rgba(239, 243, 247, 0.48));
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  nav.topbar {
+    padding-top: max(0.7rem, env(safe-area-inset-top));
+    gap: 0.45rem 0.75rem;
+  }
+
+  nav.topbar .home { font-size: 0.78rem; }
+
+  .topbar-right {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 0.55rem;
+  }
+
+  .topbar-right ul {
+    grid-column: 1 / -1;
+    gap: 0.35rem;
+  }
+
+  .topbar-right ul a { font-size: 0.7rem; }
+
+  .topbar-right > .wallpaper-toggle {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    justify-self: end;
+  }
+
+  .topbar-right > .theme-toggle {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .split-left header.hero {
+    padding-top: 2rem;
+    padding-bottom: 1.8rem;
+  }
+
+  h1.name { font-size: clamp(2.35rem, 12vw, 3.1rem); }
+  .role {
+    font-size: clamp(0.76rem, 3.5vw, 0.9rem);
+    line-height: 1.6;
+  }
+
+  .blurb { font-size: 0.96rem; }
+  .terminal { margin-top: 1.5rem; }
+  .terminal pre {
+    padding: 0.9rem;
+    font-size: 0.73rem;
+    overflow-wrap: anywhere;
+  }
+
+  .cta-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+  }
+
+  .btn {
+    width: 100%;
+    min-width: 0;
+    padding: 0.62rem 0.55rem;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .split-right section,
+  .split-right section.wide {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  section h2 { margin-bottom: 0.85rem; }
+
+  .repo-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.35rem;
+    padding: 0.9rem;
+  }
+
+  .repo-row .repo-lang {
+    grid-row: 2;
+    font-size: 0.7rem;
+  }
+
+  .repo-row .repo-note {
+    grid-column: 1;
+    font-size: 0.84rem;
+    overflow-wrap: anywhere;
+  }
+
+  .stack-chips { gap: 0.45rem; }
+  .chip { font-size: 0.75rem; }
+
+  .social-links { gap: 0.65rem; }
+  .social-icon { width: 2.75rem; height: 2.75rem; }
+
+  footer {
+    font-size: 0.69rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 360px) {
+  .topbar-right ul a { font-size: 0.66rem; }
+  .topbar-right > .wallpaper-toggle {
+    font-size: 0.64rem;
+    padding-inline: 0.5rem;
+  }
+  .wp-icon { display: none; }
+  .cta-row { gap: 0.5rem; }
+  .btn { font-size: 0.71rem; }
+}
