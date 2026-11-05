@@ -263,3 +263,182 @@
   .cta-row { gap: 0.5rem; }
   .btn { font-size: 0.71rem; }
 }
+
+
+/* ---------- polished Android / mobile navigation ---------- */
+@media (max-width: 1023px) {
+  nav.topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "brand wallpaper theme"
+      "links links links";
+    align-items: center;
+    column-gap: 0.55rem;
+    row-gap: 0.75rem;
+    padding: max(0.7rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) 0.7rem max(1rem, env(safe-area-inset-left));
+    background: color-mix(in srgb, var(--bg) 91%, transparent);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  nav.topbar .home {
+    grid-area: brand;
+    align-self: center;
+    width: fit-content;
+    font-size: 0.9rem;
+    letter-spacing: -0.025em;
+    padding: 0.35rem 0;
+  }
+
+  .topbar-right {
+    display: contents;
+  }
+
+  .topbar-right ul {
+    grid-area: links;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 0.3rem;
+    width: 100%;
+    min-width: 0;
+    padding: 0.25rem;
+    margin: 0;
+    border: 1px solid var(--rule);
+    border-radius: 0.8rem;
+    background: color-mix(in srgb, var(--bg-raised) 78%, transparent);
+  }
+
+  nav.topbar .topbar-right ul li {
+    min-width: 0;
+    margin: 0;
+  }
+
+  nav.topbar .topbar-right ul a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 2.55rem;
+    padding: 0.35rem 0.2rem;
+    border: 1px solid transparent;
+    border-radius: 0.58rem;
+    color: var(--ink-faint);
+    font-size: clamp(0.72rem, 2.8vw, 0.82rem);
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    transition: color var(--duration-quick) var(--ease-smooth-out),
+                background var(--duration-quick) var(--ease-smooth-out),
+                border-color var(--duration-quick) var(--ease-smooth-out);
+  }
+
+  nav.topbar .topbar-right ul a::after {
+    display: none;
+  }
+
+  nav.topbar .topbar-right ul a:hover {
+    color: var(--ink);
+    background: var(--bg-subtle);
+  }
+
+  nav.topbar .topbar-right ul a.active {
+    color: var(--ink);
+    background: color-mix(in srgb, var(--accent) 14%, var(--bg-raised));
+    border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+    font-weight: 650;
+  }
+
+  nav.topbar .topbar-right > .wallpaper-toggle,
+  nav.topbar .topbar-right > .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    width: 2.55rem;
+    min-width: 2.55rem;
+    height: 2.55rem;
+    min-height: 2.55rem;
+    padding: 0;
+    margin: 0;
+    border-radius: 0.7rem;
+    box-shadow: none;
+  }
+
+  nav.topbar .topbar-right > .wallpaper-toggle {
+    grid-area: wallpaper;
+    gap: 0;
+  }
+
+  nav.topbar .topbar-right > .wallpaper-toggle .wp-label {
+    display: none;
+  }
+
+  nav.topbar .topbar-right > .wallpaper-toggle .wp-icon {
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  nav.topbar .topbar-right > .theme-toggle {
+    grid-area: theme;
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  nav.topbar .topbar-right > .theme-toggle svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  html[data-color-theme="light"] nav.topbar {
+    background: rgba(247, 249, 251, 0.94);
+    box-shadow: 0 8px 24px rgba(37, 53, 70, 0.07);
+  }
+
+  html[data-color-theme="light"] nav.topbar .topbar-right ul {
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  html[data-color-theme="light"] nav.topbar .topbar-right ul a.active {
+    background: rgba(82, 111, 145, 0.12);
+    border-color: rgba(82, 111, 145, 0.2);
+    color: #263d57;
+  }
+
+  nav.topbar a:focus-visible,
+  nav.topbar button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 380px) {
+  nav.topbar {
+    column-gap: 0.4rem;
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
+  }
+
+  nav.topbar .topbar-right ul {
+    gap: 0.15rem;
+    padding: 0.2rem;
+  }
+
+  nav.topbar .topbar-right ul a {
+    min-height: 2.45rem;
+    padding-inline: 0.08rem;
+    font-size: 0.7rem;
+  }
+
+  nav.topbar .topbar-right > .wallpaper-toggle,
+  nav.topbar .topbar-right > .theme-toggle {
+    width: 2.4rem;
+    min-width: 2.4rem;
+    height: 2.4rem;
+    min-height: 2.4rem;
+  }
+}
