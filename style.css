@@ -61,9 +61,20 @@ html[data-theme="anime-wallpaper"] body {
 }
 
 
-/* Minimal circular pointer */
+/* Minimal circular pointer follows the active theme accent. */
 html, body, a, button, [role="button"], input, textarea, select {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23A58BCF'/%3E%3C/svg%3E") 8 8, auto;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='4' fill='%237189A8'/%3E%3C/svg%3E") 8 8, auto;
+}
+
+html[data-color-theme="light"],
+html[data-color-theme="light"] body,
+html[data-color-theme="light"] a,
+html[data-color-theme="light"] button,
+html[data-color-theme="light"] [role="button"],
+html[data-color-theme="light"] input,
+html[data-color-theme="light"] textarea,
+html[data-color-theme="light"] select {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='4' fill='%23526F91'/%3E%3C/svg%3E") 8 8, auto;
 }
 
 html {
