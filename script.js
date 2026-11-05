@@ -163,4 +163,35 @@
     });
   });
 
+
+  // Independent light / dark color theme
+  var COLOR_THEME_KEY = 'techfolio-color-theme';
+  var themeToggles = document.querySelectorAll('.js-theme-toggle');
+
+  function setColorTheme(theme) {
+    var isLight = theme === 'light';
+    document.documentElement.setAttribute('data-color-theme', isLight ? 'light' : 'dark');
+    if (metaTheme) metaTheme.setAttribute('content', isLight ? '#F5F7FA' : '#0B0B0D');
+
+    themeToggles.forEach(function (btn) {
+      var label = isLight ? 'Switch to dark theme' : 'Switch to light theme';
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
+    });
+
+    try { localStorage.setItem(COLOR_THEME_KEY, isLight ? 'light' : 'dark'); } catch (e) {}
+  }
+
+  var savedColorTheme = null;
+  try { savedColorTheme = localStorage.getItem(COLOR_THEME_KEY); } catch (e) {}
+  setColorTheme(savedColorTheme === 'light' ? 'light' : 'dark');
+
+  themeToggles.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var currentTheme = document.documentElement.getAttribute('data-color-theme');
+      setColorTheme(currentTheme === 'light' ? 'dark' : 'light');
+    });
+  });
+
+
 })();
