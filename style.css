@@ -299,16 +299,16 @@ h1.name {
   background: var(--rule);
 }
 
-.terminal .dot:nth-child(1) {
-  background: #ff5f57;
+.terminal .bar > .dot:nth-of-type(1) {
+  background-color: #ff5f57 !important;
 }
 
-.terminal .dot:nth-child(2) {
-  background: #febc2e;
+.terminal .bar > .dot:nth-of-type(2) {
+  background-color: #febc2e !important;
 }
 
-.terminal .dot:nth-child(3) {
-  background: #28c840;
+.terminal .bar > .dot:nth-of-type(3) {
+  background-color: #28c840 !important;
 }
 
 .terminal .label {
