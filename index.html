@@ -45,6 +45,12 @@
 
   <script>
     try {
+      var savedColorTheme = localStorage.getItem('techfolio-color-theme');
+      document.documentElement.setAttribute('data-color-theme', savedColorTheme === 'light' ? 'light' : 'dark');
+      if (savedColorTheme === 'light') {
+        var themeColorMeta = document.getElementById('meta-theme-color');
+        if (themeColorMeta) themeColorMeta.setAttribute('content', '#F5F7FA');
+      }
       if (localStorage.getItem('itznan_wallpaper_theme') === 'disabled') {
         document.documentElement.setAttribute('data-theme', 'default');
       } else {
@@ -67,15 +73,21 @@
     <div class="wallpaper-overlay"></div>
   </div>
 
-  <button
-    type="button"
-    class="wallpaper-toggle wallpaper-float js-wallpaper-toggle active"
-    aria-pressed="true"
-    title="Disable anime wallpaper theme"
-  >
-    <span class="wp-icon" aria-hidden="true">✦</span>
-    <span class="wp-label">Wallpaper: <span class="wp-status">On</span></span>
-  </button>
+  <div class="utility-toggles wallpaper-float" aria-label="Appearance controls">
+    <button
+      type="button"
+      class="wallpaper-toggle js-wallpaper-toggle active"
+      aria-pressed="true"
+      title="Disable anime wallpaper theme"
+    >
+      <span class="wp-icon" aria-hidden="true">✦</span>
+      <span class="wp-label">Wallpaper: <span class="wp-status">On</span></span>
+    </button>
+    <button type="button" class="theme-toggle js-theme-toggle" aria-label="Switch to light theme" title="Switch to light theme">
+      <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+      <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.6 8.6 0 1 0 20.2 15.1Z"/></svg>
+    </button>
+  </div>
 
   <nav class="topbar">
     <a class="home" href="#top">~/lavi</a>
@@ -96,6 +108,10 @@
       >
         <span class="wp-icon" aria-hidden="true">✦</span>
         <span class="wp-label">Wallpaper: <span class="wp-status">On</span></span>
+      </button>
+      <button type="button" class="theme-toggle js-theme-toggle" aria-label="Switch to light theme" title="Switch to light theme">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.6 8.6 0 1 0 20.2 15.1Z"/></svg>
       </button>
     </div>
   </nav>
