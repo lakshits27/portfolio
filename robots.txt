@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lakshits27.github.io/portfolio/sitemap.xml
+Sitemap: https://lakshits27.github.io/techfolio/sitemap.xml

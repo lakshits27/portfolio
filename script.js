@@ -43,7 +43,7 @@
 
         if (charIndex >= full.length) {
           built += (l.kind === 'cmd'
-            ? '<span class="' + cls + '">' + l.prompt + '</span>' + l.text.slice(0)
+            ? '<span class="' + cls + '">' + l.prompt + '</span>' + l.text
             : '<span class="' + cls + '">' + l.text + '</span>') + '\n';
           lineIndex++;
           charIndex = 0;
@@ -57,7 +57,10 @@
     }
   }
 
-  // Smooth scroll for anchor links
+  // Smooth scroll for anchor links, respecting reduced-motion preferences.
+  var prefersReducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var targetId = this.getAttribute('href');
@@ -66,7 +69,7 @@
       if (target) {
         e.preventDefault();
         target.scrollIntoView({
-          behavior: 'smooth',
+          behavior: prefersReducedMotion ? 'auto' : 'smooth',
           block: 'start'
         });
         if (history.pushState) {
@@ -105,25 +108,42 @@
   window.addEventListener('scroll', updateActiveSection, { passive: true });
   updateActiveSection();
 
-  // Copy-to-clipboard handler
+  // Copy-to-clipboard handler with a safe manual fallback.
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var text = btn.getAttribute('data-copy');
       if (!text) return;
-      navigator.clipboard.writeText(text).then(function () {
-        var original = btn.textContent;
-        btn.textContent = 'copied!';
+
+      function showCopied() {
+        var originalTooltip = btn.getAttribute('data-tooltip');
+        var originalLabel = btn.getAttribute('aria-label');
+        btn.setAttribute('data-tooltip', 'Copied!');
+        btn.setAttribute('aria-label', 'Copied to clipboard');
         btn.classList.add('copied');
-        setTimeout(function () {
-          btn.textContent = original;
+        window.setTimeout(function () {
+          if (originalTooltip === null) btn.removeAttribute('data-tooltip');
+          else btn.setAttribute('data-tooltip', originalTooltip);
+          if (originalLabel === null) btn.removeAttribute('aria-label');
+          else btn.setAttribute('aria-label', originalLabel);
           btn.classList.remove('copied');
         }, 1800);
-      }).catch(function () {
-        prompt('Copy email:', text);
-      });
+      }
+
+      function showManualFallback() {
+        window.prompt('Copy this value manually:', text);
+      }
+
+      try {
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+          navigator.clipboard.writeText(text).then(showCopied).catch(showManualFallback);
+        } else {
+          showManualFallback();
+        }
+      } catch (error) {
+        showManualFallback();
+      }
     });
   });
-
 
   // Wallpaper theme toggle handler
   var STORAGE_KEY = 'itznan_wallpaper_theme';
@@ -163,7 +183,6 @@
     });
   });
 
-
   // Independent light / dark color theme
   var COLOR_THEME_KEY = 'techfolio-color-theme';
   var themeToggles = document.querySelectorAll('.js-theme-toggle');
@@ -192,6 +211,4 @@
       setColorTheme(currentTheme === 'light' ? 'dark' : 'light');
     });
   });
-
-
 })();

@@ -1,34 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0A0C0E">
+  <meta name="robots" content="noindex">
   <title>Page Not Found — Lakshit</title>
-
   <script>
     (function () {
-      var basePath = '/portfolio/';
+      var basePath = '/techfolio/';
       var currentPath = window.location.pathname;
-
-      // Remove the GitHub Pages project path.
-      var relativePath = currentPath.startsWith(basePath)
+      var relativePath = currentPath.indexOf(basePath) === 0
         ? currentPath.slice(basePath.length)
         : currentPath.replace(/^\/+/, '');
 
-      relativePath = relativePath
-        .replace(/\/+$/, '')
-        .replace(/\.html$/, '');
+      relativePath = relativePath.replace(/\/+$/, '').replace(/\.html$/, '');
+      var validSections = ['about', 'projects', 'stack', 'contact'];
 
-      var validSections = [
-        'about',
-        'projects',
-        'stack',
-        'contact'
-      ];
-
-      if (validSections.includes(relativePath)) {
+      if (validSections.indexOf(relativePath) !== -1) {
         window.location.replace(basePath + '#' + relativePath);
       } else {
         window.location.replace(basePath);
@@ -36,11 +25,7 @@
     })();
   </script>
 </head>
-
 <body style="background:#0A0C0E;color:#e8edf0;font-family:sans-serif;padding:2rem;">
-  <p>
-    Redirecting to
-    <a href="/portfolio/" style="color:#6d94a8;">Lakshit's portfolio</a>...
-  </p>
+  <p>Redirecting to <a href="/techfolio/" style="color:#6d94a8;">Lakshit's Techfolio</a>...</p>
 </body>
 </html>
