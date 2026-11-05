@@ -1052,8 +1052,8 @@ html[data-color-theme="light"] .wallpaper-img {
 
 html[data-color-theme="light"] .wallpaper-overlay {
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(245, 248, 251, 0.24) 0%, rgba(239, 243, 247, 0.44) 100%),
-    linear-gradient(to bottom, rgba(245, 248, 251, 0.16) 0%, rgba(239, 243, 247, 0.34) 100%);
+    radial-gradient(ellipse at 50% 30%, rgba(245, 248, 251, 0.29) 0%, rgba(239, 243, 247, 0.49) 100%),
+    linear-gradient(to bottom, rgba(245, 248, 251, 0.21) 0%, rgba(239, 243, 247, 0.39) 100%);
 }
 
 html[data-color-theme="light"] body.wallpaper-active .terminal,
