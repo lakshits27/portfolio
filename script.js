@@ -13,8 +13,8 @@
     function renderStatic() {
       var html = '';
       lines.forEach(function (l) {
-        if (l.kind === 'cmd') html += '<span class="prompt">' + l.prompt + '</span>' + l.text + '\\n';
-        else html += '<span class="out">' + l.text + '</span>\\n';
+        if (l.kind === 'cmd') html += '<span class="prompt">' + l.prompt + '</span>' + l.text + '\n';
+        else html += '<span class="out">' + l.text + '</span>\n';
       });
       html += '<span class="prompt">$ </span><span class="cursor">&nbsp;</span>';
       el.innerHTML = html;
@@ -44,7 +44,7 @@
         if (charIndex >= full.length) {
           built += (l.kind === 'cmd'
             ? '<span class="' + cls + '">' + l.prompt + '</span>' + l.text
-            : '<span class="' + cls + '">' + l.text + '</span>') + '\\n';
+            : '<span class="' + cls + '">' + l.text + '</span>') + '\n';
           lineIndex++;
           charIndex = 0;
           setTimeout(step, 220);
