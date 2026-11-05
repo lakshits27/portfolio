@@ -1047,6 +1047,7 @@ html[data-color-theme="light"][data-theme="anime-wallpaper"] body {
 }
 
 html[data-color-theme="light"] .wallpaper-img {
+  background-image: url("background/light-background.gif");
   filter: blur(8px) brightness(1.08) saturate(0.72) contrast(0.92);
 }
 
