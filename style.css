@@ -299,6 +299,18 @@ h1.name {
   background: var(--rule);
 }
 
+.terminal .dot:nth-child(1) {
+  background: #ff5f57;
+}
+
+.terminal .dot:nth-child(2) {
+  background: #febc2e;
+}
+
+.terminal .dot:nth-child(3) {
+  background: #28c840;
+}
+
 .terminal .label {
   margin-left: 0.4rem;
   font-family: var(--font-mono);
