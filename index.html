@@ -11,7 +11,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=7">
 
   <link rel="stylesheet" href="style.css?v=11">
-  <link rel="stylesheet" href="mobile.css?v=1">
+  <link rel="stylesheet" href="mobile.css?v=2">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Lakshit - Techfolio">
@@ -93,7 +93,22 @@
   <nav class="topbar">
     <a class="home" href="#top">~/lavi</a>
 
-    <div class="topbar-right">
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+      title="Open menu"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="5" cy="12" r="1.5" />
+        <circle cx="12" cy="12" r="1.5" />
+        <circle cx="19" cy="12" r="1.5" />
+      </svg>
+    </button>
+
+    <div class="topbar-right" id="mobile-navigation">
       <ul>
         <li><a href="#about">about</a></li>
         <li><a href="#projects">projects</a></li>
@@ -407,6 +422,6 @@
     </main>
   </div>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
