@@ -12,9 +12,9 @@
       var currentPath = window.location.pathname;
       var relativePath = currentPath.indexOf(basePath) === 0
         ? currentPath.slice(basePath.length)
-        : currentPath.replace(/^\\/+/, '');
+        : currentPath.replace(/^\/+/, '');
 
-      relativePath = relativePath.replace(/\\/+$/, '').replace(/\\.html$/, '');
+      relativePath = relativePath.replace(/\/+$/, '').replace(/\.html$/, '');
       var validSections = ['about', 'projects', 'stack', 'contact'];
 
       if (validSections.indexOf(relativePath) !== -1) {
